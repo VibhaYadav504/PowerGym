@@ -6,7 +6,7 @@ import {
   updateTrainer,
   deleteTrainer,
   getTrainerById,
-} from "../controller/trainerController.js";
+} from "../Controller/trainerController.js";
 
 const router = express.Router();
 
