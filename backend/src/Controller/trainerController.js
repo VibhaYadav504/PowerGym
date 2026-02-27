@@ -1,4 +1,4 @@
-import Trainer from "../model/trainer.js";
+import Trainer from "../model/Trainer.js";
 import { uploadToCloudinary } from "../config/cloudinary.js";
 
 //  Create Trainer
