@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { createTrainer } from "../../Service/trainerService";
-
+const baseURL = import.meta.env.VITE_BASE_URL;
 // Cloudinary config
 const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/YOUR_CLOUD_NAME/upload";
 const CLOUDINARY_UPLOAD_PRESET = "YOUR_UPLOAD_PRESET";
@@ -44,7 +44,7 @@ const TrainerForm = () => {
     formDataToSend.append("status", formData.status);
     formDataToSend.append("photo", photoFile);
 
-    await axios.post("http://localhost:5000/api/trainers", formDataToSend, {
+    await axios.post(`${baseURL}/api/trainers`, formDataToSend, {
       headers: { "Content-Type": "multipart/form-data" },
     });
 

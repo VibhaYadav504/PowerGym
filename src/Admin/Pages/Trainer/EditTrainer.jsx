@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { getTrainerById } from "../../Service/trainerService";
-
+const baseURL = import.meta.env.VITE_BASE_URL;
 const EditTrainer = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -59,7 +59,7 @@ const EditTrainer = () => {
         formDataToSend.append("photo", photoFile);
       }
 
-      await axios.put(`http://localhost:5000/api/trainers/${id}`, formDataToSend, {
+      await axios.put(`${baseURL}/api/trainers/${id}`, formDataToSend, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

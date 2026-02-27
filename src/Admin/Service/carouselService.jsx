@@ -1,7 +1,9 @@
 import axios from "axios";
+const baseURL = import.meta.env.VITE_BASE_URL;
+const API_URL = `${baseURL}/api/carousels`;
 
-const API_URL = "http://localhost:5000/api/carousels"; // update if your backend URL/port is different
-
+// const API_URL = "http://localhost:5000/api/carousels"; // update if your backend URL/port is different
+// const API_URL = "https://powergym-94ad.onrender.com";
 
 export const getCarousels = async () => {
   const response = await axios.get(API_URL);

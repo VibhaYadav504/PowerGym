@@ -1,6 +1,9 @@
 import axios from "axios";
+const baseURL = import.meta.env.VITE_BASE_URL;
+const API_URL = `${baseURL}/api/gallerys`;
 
-const API_URL = "http://localhost:5000/api/gallerys";
+// const API_URL = "http://localhost:5000/api/gallerys";
+// const API_URL = "https://powergym-94ad.onrender.com";
 
 // Get all galleries
 export const getGallery = async () => {

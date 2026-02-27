@@ -1,6 +1,7 @@
 import axios from "axios";
-
-const API_URL = "http://localhost:5000/api/blogs"; // Update if your backend URL/port is different
+const baseURL = import.meta.env.VITE_BASE_URL;
+const API_URL = `${baseURL}/api/blogs`; // Update if your backend URL/port is different
+// const API_URL = "https://powergym-94ad.onrender.com"; // Update if your backend URL/port is different
 
 
 export const getBlogs = async () => {
