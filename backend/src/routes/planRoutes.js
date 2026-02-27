@@ -5,7 +5,7 @@ import {
   updatePlan,
   deletePlan,
   getPlanById,
-} from "../controller/planController.js";
+} from "../Controller/planController.js";
 
 const router = express.Router();
 
