@@ -1,4 +1,4 @@
-import Plan from "../model/plan.js";
+import Plan from "../model/Plan.js";
 
 
 //  Get All Plans
